@@ -1,3 +1,4 @@
+#include "core/Session.h"
 #include <string>
 
 /**
@@ -6,6 +7,7 @@
  * @return Exit code (0 if test succeeded).
  */
 int smokeTest() {
+    Session session({});
     return 0;
 }
 
