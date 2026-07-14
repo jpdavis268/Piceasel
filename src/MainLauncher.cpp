@@ -2,6 +2,9 @@
 #include <optional>
 #include <string>
 
+using std::string;
+using std::optional;
+
 /**
  * @brief Launch Piceasel.
  * 
@@ -10,7 +13,7 @@
  * @return Exit code.
  */
 int main(int argc, char** argv) {
-    std::optional<std::string> image;
+    optional<string> image;
     if (argc < 2) {
         image = {};
     }

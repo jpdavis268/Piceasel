@@ -3,6 +3,7 @@ add_library(PiceaselLib)
 target_sources(PiceaselLib
     PRIVATE
         core/Session.cpp
+        util/Logger.cpp
     
     PUBLIC
         FILE_SET HEADERS
