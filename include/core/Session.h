@@ -1,5 +1,6 @@
 #pragma once
 
+#include "core/Window.h"
 #include <optional>
 #include <string>
 
@@ -31,4 +32,7 @@ class Session {
          * @brief Clean up session resources when program closes.
          */
         ~Session();
+
+    private:
+        Window* window;
 };

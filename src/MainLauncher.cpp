@@ -1,5 +1,7 @@
 #include "core/Session.h"
+#include "util/Logger.h"
 #include <optional>
+#include <stdexcept>
 #include <string>
 
 using std::string;
@@ -21,6 +23,12 @@ int main(int argc, char** argv) {
         image = argv[1];
     }
     
-    Session session = Session(image);
-    session.loop();
+    try {
+        Session session = Session(image);
+        session.loop();
+    }
+    catch (std::runtime_error* e) {
+        Logger::error(e->what());
+        return -1;
+    }
 }

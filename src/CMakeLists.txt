@@ -4,6 +4,7 @@ target_sources(PiceaselLib
     PRIVATE
         core/Session.cpp
         util/Logger.cpp
+        core/Window.cpp
     
     PUBLIC
         FILE_SET HEADERS
@@ -12,6 +13,11 @@ target_sources(PiceaselLib
 )
 
 add_executable(Piceasel)
+
+target_link_libraries(PiceaselLib
+    PRIVATE
+        glfw
+)
 
 set_target_properties(Piceasel
     PROPERTIES
