@@ -19,7 +19,7 @@ Window::Window(int width, int height, string title) {
     this->height = height;
     if (windowHandle == nullptr) {
         glfwTerminate();
-        throw std::runtime_error("GLFW window creation returned null pointer.");
+        throw new std::runtime_error("GLFW window creation returned null pointer.");
     }
 
     // Initialize OpenGL context.
