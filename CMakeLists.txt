@@ -1,5 +1,9 @@
 cmake_minimum_required(VERSION 4.3.4)
 
-project(Piceasel VERSION 0.0.1)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+project(Piceasel)
 
 add_subdirectory(src)
+add_subdirectory(tests)
